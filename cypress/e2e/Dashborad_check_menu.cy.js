@@ -1,14 +1,8 @@
 import { login, handlePopup, submitLoginForm, verifySuccessfulLogin } from '../support/founctions';
+
 describe('Darwynn Inventory Navigation Test', () => {
-  
- /* Cypress.on('uncaught:exception', (err, runnable) => {
-    // Returning false here prevents Cypress from failing the test
-    // when the application throws an uncaught exception
-    return false
-  })*/
-  
-  //Add dirs attribute to test
-  before(() => {
+
+before(() => {
     cy.fixture('menu_dir.json').as('subdirs');
 
     const username = Cypress.env('TEST_USERNAME')
@@ -26,7 +20,7 @@ describe('Darwynn Inventory Navigation Test', () => {
     cy.wait(2000)
   });
 
-  // Add an event listener to handle uncaught exceptions
+
   it('should be able to access all subdirectories', function() {
     this.subdirs.subdirectories.forEach((subdir) => {
       const fullUrl = `${this.subdirs.baseUrl}${subdir.path}`;
@@ -45,27 +39,12 @@ describe('Darwynn Inventory Navigation Test', () => {
       cy.visit(fullUrl, {
         timeout: this.subdirs.timeout
       });
-
-      // Verify page title
-      /*if (subdir.expectedTitle) {
-        cy.title().should('include', subdir.expectedTitle);
-      }*/
-
-      // Verify multiple content pieces
-      /*subdir.expectedContent.forEach((content) => {
-        cy.contains(content, { timeout: this.subdirs.timeout }).should('be.visible');
-      });*/
-
       // Optional: Take screenshot for visual reference
       cy.screenshot(`subdir-${subdir.path.replace(/\//g, '-')}`);
     });
     cy.visit('/app/dashboard');
-  });
-  
-
-  it('should have Orders hung up pages', () => {
-
-    // Test clicking on "Orders hung up" hyperlink
+    //Finish check the main MENU
+     // Test clicking on "Orders hung up" hyperlink
     cy.log('Testing "Orders hung up" hyperlink')
     cy.screenshot('dashboard-before-click')
     
@@ -117,15 +96,27 @@ describe('Darwynn Inventory Navigation Test', () => {
                 }
               })
             })
-            
-            // Navigate back to dashboard
-            //cy.go('back')
-            //cy.wait(2000)
-            //cy.screenshot('back-to-dashboard')
           } 
         })
       } 
     })
-  })
-    
+
+
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
