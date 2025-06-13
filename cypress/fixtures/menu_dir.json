@@ -1,0 +1,82 @@
+{
+  "subdirectories": [
+    {
+      "path": "app/inventory/inventory_stock",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+    {
+      "path": "app/inventory/products",
+      "expectedTitle": "Directory B Page",
+      "expectedContent": ["Welcome to B", "Section B Content"],
+      "statusCode": 200
+    },
+    {
+      "path": "app/inventory/kit_management",
+      "expectedTitle": "Directory C Page",
+      "expectedContent": ["Welcome to C", "Section C Content"],
+      "statusCode": 200
+      
+    },
+      {
+      "path": "app/inventory/packaging",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+      {
+      "path": "app/inventory/sku_mapping",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+      {
+      "path": "app/customer/owner_customers",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+      {
+      "path": "app/inbounds",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+      {
+      "path": "app/outbounds/wholesale",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+      {
+      "path": "app/outbounds/e-commerce",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },
+    {
+      "path": "app/returns",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },{
+      "path": "app/integration/online_shop",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },{
+      "path": "app/report/inventory_reports",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    },{
+      "path": "app/report/fulfillment_reports",
+      "expectedTitle": "Directory A Page",
+      "expectedContent": ["Welcome to A", "Section A Content"],
+      "statusCode": 200
+    }
+  ],
+  "baseUrl": "https://test-csr.darwynnfulfillment.com/",
+  "timeout": 10000
+}

@@ -1,7 +1,71 @@
+export const loginWithEric = (
+  username,
+  password,
+  code,
+  redirectPath = 'https://test-csr.darwynnfulfillment.com/app/dashboard'
+) => {
+  const sessionKey = `${username}-${Cypress.currentTest.titlePath.join('-')}`;
 
+  cy.session(sessionKey, () => {
+    cy.visit('authentication/sign-in');
+
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('input[name="code"]').type(code);
+
+    cy.contains('Remember me').click();
+    cy.get('button[type="submit"], button')
+    .contains(/sign in|login|log in/i, { timeout: 3000 })
+    .should('exist')
+    .click({ force: true, timeout: 3000 })
+
+    // Wait for redirect or key element after login
+    cy.url({ timeout: 10000 }).should('include', '/app/dashboard');
+    //cy.get('[data-testid="user-menu"]', { timeout: 10000 }).should('contain', username);
+  }, {
+    validate() {
+      cy.visit('/app/dashboard');
+      //cy.get('[data-testid="user-menu"]', { timeout: 10000 }).should('contain', username);
+    }
+  });
+};
+
+
+export const loginWithSession = (username, password, code, redirectPath = 'https://test-csr.darwynnfulfillment.com/app/dashboard') => {
+  const sessionKey = `${username}-${Cypress.currentTest.titlePath.join('-')}`;
+  
+  cy.session(sessionKey, () => {
+    cy.visit('authentication/sign-in');
+    
+    cy.get('input[name="username"]').type(username);
+    cy.get('input[name="password"]').type(password);
+    cy.get('input[name="code"]').type(code);
+    cy.contains('Remember me').click();
+    cy.contains('Sign In').click();
+    cy.get('button[type="submit"], button')
+    .contains(/sign in|login|log in/i, { timeout: 3000 })
+    .should('exist')
+    .click({ force: true, timeout: 3000 })
+
+    cy.visit('/app/dashboard');
+    
+    // 等待重定向并验证
+    cy.url().should('include', redirectPath);
+    //cy.get('[data-testid=user-menu]').should('contain', username);
+  }, {
+    validate() {
+      cy.visit('/app/dashboard');
+      //cy.get('[data-testid=user-menu]').should('contain', username);
+    }
+  });
+};
+    
 
 export function login(username,password,code)  { 
     cy.visit('/authentication/sign-in')
+    
+    //cy.session([username, password, code], () => {
+    
     cy.get('input[name="username"]').type(username);
     cy.get('input[name="password"]').type(password);
     cy.get('input[name="code"]').type(code);
@@ -14,7 +78,44 @@ export function login(username,password,code)  {
 
     cy.log('Login button clicked')
     // cy.location("pathname").should("equal",'/en/dashboard')
-}
+  }
+
+ // Function to handle pop-up if it appears
+ export function handlePopup () {
+      // Check if the pop-up exists
+      cy.get('body').then($body => {
+        // Look for the pop-up with the specific message
+        const hasPopup = $body.text().includes('Unable to find')
+
+        if (hasPopup) {
+          cy.log('Found "Unable to find" pop-up, attempting to close it')
+          cy.screenshot('popup-detected')
+          
+          // Try different approaches to close the pop-up
+          // Approach 1: Look for close button
+          cy.get('button.close, .modal-close, [aria-label="Close"], .close-button, button:contains("Close"), button:contains("OK"), button:contains("Cancel")')
+            .then($closeButtons => {
+              if ($closeButtons.length > 0) {
+                cy.wrap($closeButtons).first().click({ force: true })
+                cy.log('Clicked close button on pop-up')
+              } else {
+                // Approach 2: Try clicking outside the modal
+                cy.get('body').click(10, 10, { force: true })
+                cy.log('Attempted to click outside the pop-up')
+
+                // Approach 3: Try pressing Escape key
+                cy.get('body').type('{esc}', { force: true })
+                cy.log('Pressed Escape key to close pop-up')
+              }
+            })
+
+          // Take a screenshot after attempting to close
+          cy.wait(1000)
+          cy.screenshot('after-popup-close-attempt')
+        }
+      })
+    }
+
 
 
 export function fillLoginFormCorrectly(username, password, verificationCode) {
