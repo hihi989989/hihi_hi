@@ -1,0 +1,77 @@
+{
+  "inbound orders": [
+    {
+      "From Order No.": "ORD-2023-1001",
+      "expect_date": "2023-12-15",
+      "warehouse": "WH-EAST-01",
+      "carrier_id": "UPS-55789",
+      "customer_id": "CUST-78945",
+      "products": [
+        {
+          "product_name": "Vitamin C 500mg",
+          "quantity": 1200,
+          "batch_no": "VC-202311-01",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        },
+        {
+          "product_name": "Probiotic 10B CFU",
+          "quantity": 800,
+          "batch_no": "PB-202310-15",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2023-1002",
+      "expect_date": "2023-12-18",
+      "warehouse": "WH-WEST-03",
+      "carrier_id": "FEDEX-33214",
+      "customer_id": "CUST-12368",
+      "products": [
+        {
+          "product_name": "Omega-3 1000mg",
+          "quantity": 500,
+          "batch_no": "OM3-202309-02",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2023-1003",
+      "expect_date": "2023-12-20",
+      "warehouse": "WH-CENT-02",
+      "carrier_id": "DHL-88761",
+      "customer_id": "CUST-45623",
+      "products": [
+        {
+          "product_name": "Vitamin D3 2000IU",
+          "quantity": 1500,
+          "batch_no": "VD3-202311-05",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        },
+        {
+          "product_name": "Magnesium 400mg",
+          "quantity": 1000,
+          "batch_no": "MG-202310-08",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        },
+        {
+          "product_name": "Zinc 50mg",
+          "quantity": 750,
+          "batch_no": "ZN-202311-03",
+          "batch_production_date": "2025-07-01",
+          "batch_expiry_date": "2025-11-01"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+

@@ -2,9 +2,9 @@ import { login, handlePopup, submitLoginForm, verifySuccessfulLogin } from '../s
 
 describe('Darwynn Inventory Navigation Test', () => {
 
-before(() => {
+beforeEach(() => {
     cy.fixture('menu_dir.json').as('subdirs');
-
+    
     const username = Cypress.env('TEST_USERNAME')
     const password = Cypress.env('TEST_PASSWORD')
     const verificationCode = Cypress.env('VERIFICATION_CODE')
@@ -101,19 +101,4 @@ before(() => {
       } 
     })
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 })

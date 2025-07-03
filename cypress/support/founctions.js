@@ -7,7 +7,7 @@ export const loginWithEric = (
   const sessionKey = `${username}-${Cypress.currentTest.titlePath.join('-')}`;
 
   cy.session(sessionKey, () => {
-    cy.visit('authentication/sign-in');
+    cy.visit('/authentication/sign-in');
 
     cy.get('input[name="username"]').type(username);
     cy.get('input[name="password"]').type(password);
@@ -63,8 +63,11 @@ export const loginWithSession = (username, password, code, redirectPath = 'https
 
 export function login(username,password,code)  { 
     cy.visit('/authentication/sign-in')
-    
+    //username = Cypress.env('TEST_USERNAME')
+    //password = Cypress.env('TEST_PASSWORD')
+    //code = Cypress.env('VERIFICATION_CODE')
     //cy.session([username, password, code], () => {
+   
     
     cy.get('input[name="username"]').type(username);
     cy.get('input[name="password"]').type(password);
@@ -277,3 +280,103 @@ export function verifySuccessfulLogin() {
     }
   })
 }
+
+
+
+// cypress/support/founctions.js
+
+function generateOrderNumber(orderType) {
+  const randomDigits = Math.floor(1000 + Math.random() * 9000);
+  return `Autotest-order-${orderType}-${randomDigits}`;
+}
+
+function generateAndVerifyOrder(orderType) {
+  const orderNumber = generateOrderNumber(orderType);
+  cy.log(`生成的订单号: ${orderNumber}`);
+
+  const regex = new RegExp(`^Autotest-order-${orderType}-\\d{4}$`);
+  expect(orderNumber).to.match(regex);
+
+  return orderNumber;
+  
+}
+
+
+const ExcelJS = require('exceljs');
+const path = require('path');
+const dayjs = require('dayjs');
+
+
+function getNextWorkday(baseDate, offsetDays = 1) {
+  let date = dayjs(baseDate).add(offsetDays, 'day');
+  while (date.day() === 0 || date.day() === 6) {
+    date = date.add(1, 'day');
+  }
+  return date;
+}
+
+async function generateInboundExcel(filePath) {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet('Inbound');
+
+  const warehouses = ['WH-Shanghai', 'WH-Beijing', 'WH-Guangzhou'];
+  const packageUnits = ['Box', 'Carton', 'Pallet'];
+
+  sheet.columns = [
+    { header: 'Owner ID*', key: 'ownerId' },
+    { header: 'PO#*', key: 'po' },
+    { header: 'Inbound Warehouse*', key: 'warehouse' },
+    { header: 'Expected Arrive Time*(yyyy-MM-dd)', key: 'arrival' },
+    { header: 'Customer Id*', key: 'customerId' },
+    { header: 'SKU*', key: 'sku' },
+    { header: 'SKU Package Unit*', key: 'packageUnit' },
+    { header: 'SKU Qty*', key: 'skuQty' },
+    { header: 'Expiration Date(yyyy-MM-dd)', key: 'expiration' },
+    { header: 'Batch No', key: 'batchNo' },
+  ];
+
+  const today = dayjs();
+
+  for (let i = 1; i <= 5; i++) {
+    const arrivalDate = getNextWorkday(today, i).format('YYYY-MM-DD');
+    const expirationDate = dayjs(arrivalDate).add(1, 'year').format('YYYY-MM-DD');
+
+    const randomWarehouse = warehouses[Math.floor(Math.random() * warehouses.length)];
+    const randomPackageUnit = packageUnits[Math.floor(Math.random() * packageUnits.length)];
+
+    sheet.addRow({
+      ownerId: `Owner-${i}`,
+      po: `PO-${1000 + i}`,
+      warehouse: randomWarehouse,
+      arrival: arrivalDate,
+      customerId: `CUST-${i}`,
+      sku: `SKU-${i}`,
+      packageUnit: randomPackageUnit,
+      skuQty: 100 * i,
+      expiration: expirationDate,
+      batchNo: `BATCH-${i}`
+    });
+  }
+
+  await workbook.xlsx.writeFile(filePath);
+  console.log(`Excel file written to ${filePath}`);
+}
+
+function generateRandom4Digits() {
+  return Math.floor(1000 + Math.random() * 9000);
+}
+
+
+module.exports = {
+  login,
+  handlePopup,
+  submitLoginForm,
+  verifySuccessfulLogin,
+  generateOrderNumber,
+  generateAndVerifyOrder,
+  getNextWorkday,
+  generateInboundExcel,
+  generateRandom4Digits,
+  
+
+};

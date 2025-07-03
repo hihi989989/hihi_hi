@@ -1,5 +1,10 @@
 {
   "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
     "cypress": "^14.4.1"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "exceljs": "^4.4.0"
   }
 }

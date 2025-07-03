@@ -1,0 +1,361 @@
+{
+  "generated_at": "2025-06-16T20:28:50.682Z",
+  "orders": [
+    {
+      "order_no": "ORD-2025-37983",
+      "expect_date": "2025-07-14",
+      "warehouse": "WH-MN-67",
+      "carrier_id": "EY32793",
+      "customer_id": "CUST-HN1MD2UL",
+      "products": [
+        {
+          "product_name": "Rustic Wooden Cheese 1439Bq",
+          "quantity": 236,
+          "batch_no": "RWC1-0146-OXV",
+          "batch_production_date": "2023-07-18",
+          "batch_expiry_date": "2026-02-15"
+        },
+        {
+          "product_name": "Rustic Rubber Chair 480s",
+          "quantity": 502,
+          "batch_no": "RRC4-3505-U2T",
+          "batch_production_date": "2023-11-01",
+          "batch_expiry_date": "2027-04-12"
+        },
+        {
+          "product_name": "Luxurious Cotton Keyboard 1043V",
+          "quantity": 806,
+          "batch_no": "LCK1-4491-YLE",
+          "batch_production_date": "2024-12-28",
+          "batch_expiry_date": "2026-05-08"
+        },
+        {
+          "product_name": "Fresh Cotton Pants 445C",
+          "quantity": 720,
+          "batch_no": "FCP4-1317-LTZ",
+          "batch_production_date": "2023-11-19",
+          "batch_expiry_date": "2027-04-16"
+        },
+        {
+          "product_name": "Frozen Ceramic Computer 1126cd",
+          "quantity": 867,
+          "batch_no": "FCC1-7216-V2T",
+          "batch_production_date": "2024-09-07",
+          "batch_expiry_date": "2026-09-23"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-91208",
+      "expect_date": "2025-06-21",
+      "warehouse": "WH-LA-50",
+      "carrier_id": "AA85088",
+      "customer_id": "CUST-QDFLTR1T",
+      "products": [
+        {
+          "product_name": "Handmade Metal Salad 1985W",
+          "quantity": 101,
+          "batch_no": "HMS1-1718-HKO",
+          "batch_production_date": "2024-02-12",
+          "batch_expiry_date": "2025-09-07"
+        },
+        {
+          "product_name": "Gorgeous Aluminum Pizza 970lm",
+          "quantity": 393,
+          "batch_no": "GAP9-2640-DQK",
+          "batch_production_date": "2024-03-19",
+          "batch_expiry_date": "2026-10-13"
+        },
+        {
+          "product_name": "Refined Metal Shoes 870Gy",
+          "quantity": 147,
+          "batch_no": "RMS8-5928-HYI",
+          "batch_production_date": "2024-06-18",
+          "batch_expiry_date": "2025-10-22"
+        },
+        {
+          "product_name": "Licensed Rubber Shoes 1479Pa",
+          "quantity": 83,
+          "batch_no": "LRS1-8376-0NT",
+          "batch_production_date": "2023-07-31",
+          "batch_expiry_date": "2025-08-31"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-77291",
+      "expect_date": "2025-06-17",
+      "warehouse": "WH-ID-16",
+      "carrier_id": "VT33817",
+      "customer_id": "CUST-08A1DPFD",
+      "products": [
+        {
+          "product_name": "Frozen Bronze Keyboard 1400°C",
+          "quantity": 86,
+          "batch_no": "FBK1-7305-MPU",
+          "batch_production_date": "2025-01-11",
+          "batch_expiry_date": "2026-11-24"
+        },
+        {
+          "product_name": "Gorgeous Granite Chips 1891°C",
+          "quantity": 456,
+          "batch_no": "GGC1-8873-SBT",
+          "batch_production_date": "2024-01-24",
+          "batch_expiry_date": "2027-03-13"
+        },
+        {
+          "product_name": "Awesome Silk Ball 925rad",
+          "quantity": 606,
+          "batch_no": "ASB9-7028-D1P",
+          "batch_production_date": "2024-06-17",
+          "batch_expiry_date": "2026-07-05"
+        },
+        {
+          "product_name": "Handcrafted Steel Towels 555Wb",
+          "quantity": 236,
+          "batch_no": "HST5-1988-8KI",
+          "batch_production_date": "2024-09-09",
+          "batch_expiry_date": "2026-01-07"
+        },
+        {
+          "product_name": "Generic Ceramic Cheese 1455Pa",
+          "quantity": 645,
+          "batch_no": "GCC1-4410-HX6",
+          "batch_production_date": "2024-10-29",
+          "batch_expiry_date": "2027-02-28"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-66058",
+      "expect_date": "2025-07-03",
+      "warehouse": "WH-OR-71",
+      "carrier_id": "CI64792",
+      "customer_id": "CUST-MJCK3F6K",
+      "products": [
+        {
+          "product_name": "Licensed Concrete Pizza 1556N",
+          "quantity": 152,
+          "batch_no": "LCP1-1164-IGA",
+          "batch_production_date": "2025-02-06",
+          "batch_expiry_date": "2026-03-09"
+        },
+        {
+          "product_name": "Recycled Bamboo Hat 269Pa",
+          "quantity": 379,
+          "batch_no": "RBH2-0093-X17",
+          "batch_production_date": "2024-10-06",
+          "batch_expiry_date": "2026-03-26"
+        },
+        {
+          "product_name": "Gorgeous Marble Sausages 749F",
+          "quantity": 561,
+          "batch_no": "GMS7-6294-PEC",
+          "batch_production_date": "2023-02-04",
+          "batch_expiry_date": "2025-12-25"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-02606",
+      "expect_date": "2025-06-30",
+      "warehouse": "WH-ND-91",
+      "carrier_id": "G974312",
+      "customer_id": "CUST-ISZWQJCA",
+      "products": [
+        {
+          "product_name": "Handmade Concrete Towels 406S",
+          "quantity": 21,
+          "batch_no": "HCT4-3135-5DJ",
+          "batch_production_date": "2025-03-24",
+          "batch_expiry_date": "2026-09-05"
+        },
+        {
+          "product_name": "Electronic Bronze Salad 1077Hz",
+          "quantity": 95,
+          "batch_no": "EBS1-6893-LMK",
+          "batch_production_date": "2024-05-13",
+          "batch_expiry_date": "2027-04-18"
+        },
+        {
+          "product_name": "Frozen Metal Gloves 1666H",
+          "quantity": 695,
+          "batch_no": "FMG1-6288-0TV",
+          "batch_production_date": "2024-03-25",
+          "batch_expiry_date": "2026-09-14"
+        },
+        {
+          "product_name": "Oriental Marble Bacon 429m",
+          "quantity": 866,
+          "batch_no": "OMB4-6394-UTE",
+          "batch_production_date": "2025-05-25",
+          "batch_expiry_date": "2025-07-03"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-24671",
+      "expect_date": "2025-06-16",
+      "warehouse": "WH-OK-28",
+      "carrier_id": "JT28253",
+      "customer_id": "CUST-ONFLS741",
+      "products": [
+        {
+          "product_name": "Gorgeous Plastic Bacon 1615V",
+          "quantity": 480,
+          "batch_no": "GPB1-9753-BUE",
+          "batch_production_date": "2023-10-19",
+          "batch_expiry_date": "2026-02-08"
+        },
+        {
+          "product_name": "Elegant Concrete Car 513mol",
+          "quantity": 696,
+          "batch_no": "ECC5-9058-XJ0",
+          "batch_production_date": "2024-01-20",
+          "batch_expiry_date": "2026-11-04"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-79925",
+      "expect_date": "2025-06-19",
+      "warehouse": "WH-OR-15",
+      "carrier_id": "LA63942",
+      "customer_id": "CUST-WLARLCE5",
+      "products": [
+        {
+          "product_name": "Recycled Metal Pizza 809Sv",
+          "quantity": 880,
+          "batch_no": "RMP8-3424-KIR",
+          "batch_production_date": "2023-08-14",
+          "batch_expiry_date": "2026-01-26"
+        },
+        {
+          "product_name": "Fresh Aluminum Ball 384T",
+          "quantity": 37,
+          "batch_no": "FAB3-8450-YXB",
+          "batch_production_date": "2024-01-28",
+          "batch_expiry_date": "2026-03-03"
+        },
+        {
+          "product_name": "Gorgeous Steel Computer 272°C",
+          "quantity": 224,
+          "batch_no": "GSC2-7708-NEZ",
+          "batch_production_date": "2024-08-12",
+          "batch_expiry_date": "2026-01-14"
+        },
+        {
+          "product_name": "Licensed Plastic Bike 411lm",
+          "quantity": 801,
+          "batch_no": "LPB4-4557-VU7",
+          "batch_production_date": "2024-12-29",
+          "batch_expiry_date": "2027-03-05"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-20910",
+      "expect_date": "2025-06-19",
+      "warehouse": "WH-MN-17",
+      "carrier_id": "NZ51563",
+      "customer_id": "CUST-EWCMNTAZ",
+      "products": [
+        {
+          "product_name": "Licensed Cotton Computer 604Sv",
+          "quantity": 175,
+          "batch_no": "LCC6-9661-VQ3",
+          "batch_production_date": "2025-03-30",
+          "batch_expiry_date": "2026-03-08"
+        },
+        {
+          "product_name": "Refined Cotton Shirt 1133A",
+          "quantity": 682,
+          "batch_no": "RCS1-2692-BPZ",
+          "batch_production_date": "2023-05-04",
+          "batch_expiry_date": "2025-08-02"
+        },
+        {
+          "product_name": "Handmade Marble Mouse 1062J",
+          "quantity": 373,
+          "batch_no": "HMM1-3533-V1I",
+          "batch_production_date": "2024-09-15",
+          "batch_expiry_date": "2027-05-01"
+        },
+        {
+          "product_name": "Tasty Plastic Sausages 168N",
+          "quantity": 642,
+          "batch_no": "TPS1-8825-RSY",
+          "batch_production_date": "2024-07-09",
+          "batch_expiry_date": "2025-12-04"
+        },
+        {
+          "product_name": "Generic Granite Bike 1399s",
+          "quantity": 63,
+          "batch_no": "GGB1-5974-5IY",
+          "batch_production_date": "2023-01-01",
+          "batch_expiry_date": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-61917",
+      "expect_date": "2025-07-12",
+      "warehouse": "WH-VT-17",
+      "carrier_id": "JD09854",
+      "customer_id": "CUST-YLTN5CZX",
+      "products": [
+        {
+          "product_name": "Ergonomic Ceramic Keyboard 268Sv",
+          "quantity": 486,
+          "batch_no": "ECK2-7514-KO0",
+          "batch_production_date": "2023-12-26",
+          "batch_expiry_date": "2026-04-22"
+        },
+        {
+          "product_name": "Small Wooden Ball 473lx",
+          "quantity": 721,
+          "batch_no": "SWB4-8361-SQG",
+          "batch_production_date": "2024-12-12",
+          "batch_expiry_date": "2026-06-08"
+        },
+        {
+          "product_name": "Luxurious Granite Table 1258W",
+          "quantity": 798,
+          "batch_no": "LGT1-6106-MJ9",
+          "batch_production_date": "2024-01-02",
+          "batch_expiry_date": "2026-07-15"
+        }
+      ]
+    },
+    {
+      "order_no": "ORD-2025-86805",
+      "expect_date": "2025-06-22",
+      "warehouse": "WH-UT-14",
+      "carrier_id": "FR13200",
+      "customer_id": "CUST-9TEL2XLW",
+      "products": [
+        {
+          "product_name": "Bespoke Silk Fish 568Wb",
+          "quantity": 790,
+          "batch_no": "BSF5-7289-XZ8",
+          "batch_production_date": "2024-01-16",
+          "batch_expiry_date": "2027-06-12"
+        },
+        {
+          "product_name": "Refined Granite Computer 1454Hz",
+          "quantity": 330,
+          "batch_no": "RGC1-8483-BTI",
+          "batch_production_date": "2024-10-02",
+          "batch_expiry_date": "2025-09-29"
+        },
+        {
+          "product_name": "Frozen Steel Tuna 1761T",
+          "quantity": 258,
+          "batch_no": "FST1-4227-ZIG",
+          "batch_production_date": "2024-10-11",
+          "batch_expiry_date": "2026-05-16"
+        }
+      ]
+    }
+  ]
+}
