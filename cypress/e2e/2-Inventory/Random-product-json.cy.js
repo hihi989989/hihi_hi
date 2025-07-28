@@ -4,10 +4,11 @@ import { faker } from '@faker-js/faker';
 describe('Generate Random Product Data', () => {
   it('Creates 3 random product JSON files', () => {
     // Helper function to generate random values
+    
     const random = {
       id: () => Math.floor(Math.random() * 1000000).toString(),
       name: () => `Product ${Math.floor(Math.random() * 1000)}`,
-      sku: () => `SKU-${Math.floor(Math.random() * 1000000)}`,
+      sku: () => `Auto-reg-${Math.floor(Math.random() * 1000000)}-${Date.now()}`,
       price: () => (Math.random() * 1000).toFixed(2),
       bool: () => Math.random() > 0.5,
       date: () => new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString(),

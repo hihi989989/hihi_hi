@@ -17,7 +17,7 @@ before(() => {
   });
  it('Fill in the SKU product table~~~', function() {
     
-    cy.fixture('SKU-12CC7K.json').then((productData) => {
+    cy.fixture('Auto-reg-SKU-253N4E.json').then((productData) => {
       //  Click the "Add" button
       cy.visit('/app/inventory/products');
       cy.contains('button', 'Add').click();
@@ -159,7 +159,7 @@ cy.contains('.MuiAutocomplete-option', 'YES', { timeout: 3000 })
 
 
               
-const valuesToFill = [productData.package_id.unit.max, productData.package_id.unit.sec, productData.package_id.unit.min, productData.package_id.unit.weight]; // 每个空格填不同内容
+/*const valuesToFill = [productData.package_id.unit.max, productData.package_id.unit.sec, productData.package_id.unit.min, productData.package_id.unit.weight]; // 每个空格填不同内容
 let filledCount = 0;
 
 cy.get('[data-rowindex="0"]').within(() => {
@@ -186,24 +186,74 @@ cy.get('[data-rowindex="0"]').within(() => {
     }
   });
 });
+*/
+const valuesToFillRow0 = [
+  productData.package_id.unit.max,
+  productData.package_id.unit.sec,
+  productData.package_id.unit.min,
+  productData.package_id.unit.weight
+];
+let filledCountRow0 = 0;
 
-
-
-// Input a case test
-cy.get('[data-rowindex="1"]').within(() => {
+cy.get('[data-rowindex="0"]').within(() => {
+  // 打开编辑模式
   cy.get('button').eq(0).click();
 
-  cy.get('input').should('have.length.at.least', 5); // 确保输入框加载完
+  cy.get('input').each(($el) => {
+    if (filledCountRow0 >= valuesToFillRow0.length) {
+      return false; // 跳出循环
+    }
 
-  cy.get('input').eq(0).should('be.visible').click().clear().type('10');
-  cy.get('input').eq(1).clear().type('100');
-  cy.get('input').eq(2).clear().type('80');
-  cy.get('input').eq(3).clear().type('60');
-  cy.get('input').eq(4).clear().type('5');
+    cy.wrap($el).invoke('val').then(val => {
+      if (!val) {
+        cy.wrap($el).clear().type(valuesToFillRow0[filledCountRow0]);
+        filledCountRow0++;
+      }
+    });
+  });
 
-  cy.get('button').eq(0).click();
+  // 点击保存按钮
+  cy.then(() => {
+    if (filledCountRow0 === valuesToFillRow0.length) {
+      cy.get('button').eq(0).click();
+    }
+  });
 });
 
+// 第 2 行的数据
+const valuesToFillRow1 = [
+  productData.package_id.unit.quantity,
+  productData.package_id.unit.max,
+  productData.package_id.unit.sec,
+  productData.package_id.unit.min,
+  productData.package_id.unit.weight
+];
+let filledCountRow1 = 0;
+
+cy.get('[data-rowindex="1"]').within(() => {
+  // 打开编辑模式
+  cy.get('button').eq(0).click();
+
+  cy.get('input').each(($el) => {
+    if (filledCountRow1 >= valuesToFillRow1.length) {
+      return false; // 跳出循环
+    }
+
+    cy.wrap($el).invoke('val').then(val => {
+      if (!val) {
+        cy.wrap($el).clear().type(valuesToFillRow1[filledCountRow1]);
+        filledCountRow1++;
+      }
+    });
+  });
+
+  // 点击保存按钮
+  cy.then(() => {
+    if (filledCountRow1 === valuesToFillRow1.length) {
+      cy.get('button').eq(0).click();
+    }
+  });
+});
 });
 
 

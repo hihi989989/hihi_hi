@@ -1,4 +1,4 @@
-import { login, handlePopup, submitLoginForm, verifySuccessfulLogin } from '../support/founctions';
+import { login, handlePopup, submitLoginForm, verifySuccessfulLogin } from '../../support/founctions';
 
 describe('Darwynn Inventory Navigation Test', () => {
 

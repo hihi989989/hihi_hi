@@ -5,7 +5,7 @@ describe('Generate Random Product JSON Files', () => {
   };
 
   const generateProduct = () => {
-    const sku = randomString('SKU-', 6);
+    const sku = randomString('Auto-reg-SKU-', 6);
     const alias = randomString('ALIAS-SKU-', 6);
     const now = new Date().toISOString();
 
