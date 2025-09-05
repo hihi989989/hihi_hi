@@ -17,7 +17,7 @@ before(() => {
   });
  it('Fill in the SKU product table~~~', function() {
     
-    cy.fixture('Auto-reg-SKU-253N4E.json').then((productData) => {
+    cy.fixture('Auto-reg-SKU-XY5B75.json').then((productData) => {
       //  Click the "Add" button
       cy.visit('/app/inventory/products');
       cy.contains('button', 'Add').click();
