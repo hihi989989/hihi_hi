@@ -33,13 +33,13 @@ beforeEach(() => {
       .parent()
       .parent() 
       .find('input[role="combobox"][aria-autocomplete="list"]') 
-      .type('Created'); 
-    cy.contains('.MuiAutocomplete-option', 'Created', { timeout: 8000 }).click(); 
+      .type('Created {esc}'); 
+    //cy.contains('.MuiAutocomplete-option', 'Created', { timeout: 8000 }).click(); 
  
     cy.get('table tbody tr').first().as('firstRow'); 
     cy.get('@firstRow')
-      .find('td:nth-child(3)') 
-      .find('button.MuiButtonBase-root span.material-icons-round:contains("more_vert")') 
+      .find('td:nth-child(4)') 
+      .find('button').contains('more_vert').first() 
       .click(); 
     cy.get('ul[role="menu"]') 
       .should('be.visible') 

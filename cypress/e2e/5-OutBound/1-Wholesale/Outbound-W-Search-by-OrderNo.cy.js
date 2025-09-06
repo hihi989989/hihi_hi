@@ -1,9 +1,9 @@
 const tryTypingIntoAvailableInput = (text) => {
     cy.get('body').then($body => {
     if ($body.find('input[id=":rm:"]').length) {
-      cy.get('input[id=":rm:"]').clear().type(text);
+      cy.get('input[id=":rm:"]').clear().type(text).type('{enter}');
     } else if ($body.find('input[id=":rl:"]').length) {
-      cy.get('input[id=":rl:"]').clear().type(text);
+      cy.get('input[id=":rl:"]').clear().type(text).type('{enter}');
     } else {
       throw new Error('No input field with id :rm:, :rl: was found.');
     }
